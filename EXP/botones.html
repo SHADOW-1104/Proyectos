@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>x</title>
+    <!-- Estilos CSS -->
+    <style>
+        :root {
+            --background-color1: rgb(48, 48, 48);
+            --background-color2: rgba(0, 0, 0);
+            --aqua: #0ef;
+            --aqua2: rgba(0, 238, 255, 0.774);
+            --shadows: black;
+        }
+
+        ::-webkit-scrollbar{
+            display: none;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            height: 100vh;
+            background-color: var(--background-color1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-container {
+            min-height: 200px;
+            min-width: 150px;
+            /* margin: 3rem; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--background-color2);
+            box-shadow: 0 0 10px 5px var(--aqua);
+            border-radius: 10px;
+
+        }
+
+        /* .btn-container form{
+            height: 200px;
+            width: 100px;
+            padding: 5px;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--shadows);
+            border-radius: 10px;
+        }
+
+        form *{
+            margin: 5px 0;
+        } */
+
+        .btn {
+            margin-bottom: 20px;
+            color: white;
+            border: 2px solid var(--aqua2);
+            border-radius: 10px;
+            background-color: transparent;
+
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 5px 5px var(--aqua);
+            transition: 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        .divi {
+            height: 200px;
+            width: 50%;
+            color: whitesmoke;
+            background-color: var(--aqua);
+            border-radius: 10px;
+            box-shadow: 0 20px 30px var(--shadows);
+            margin: 0 auto 50px;
+        }
+
+        /* Color Change */
+
+        @media (max-width: 700px) {
+            :root {
+                --background-color1: rgb(0, 0, 0);
+                --background-color2: rgb(48, 48, 48);
+                --aqua: rgb(225, 0, 255);
+                --aqua2: rgba(225, 0, 255, 0.774);
+                --shadows: rgba(252, 252, 252, 0.288);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn-container">
+        <!-- <form>
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" autocomplete="off">
+            <label for="edad">Edad: </label>
+            <input type="number" autocomplete="off">
+            <button id="btn4" class="btn">Enviar</button>
+        </form> -->
+        <button id="btn" class="btn">Crear Div</button>
+        <button id="btn2" class="btn">Borrar Div</button>
+        <button id="btn3" class="btn">Comparador</button>
+
+    </div>
+
+    <!-- Codigo JavaScript -->
+    <script>
+        const click = document.getElementById('btn');
+        const click2 = document.getElementById('btn2');
+        const click3 = document.getElementById('btn3');
+
+        // Falta agregar funcion keydown a btn4
+        // const click4 = document.geetElemntById('btn4');
+        click.addEventListener('click', crear);
+        click2.addEventListener('click', borrar);
+        click3.addEventListener('click', ternario);
+
+
+        function crear() {
+            const newDiv = document.createElement('section');
+            newDiv.classList.add('divi');
+            document.body.appendChild(newDiv);
+
+        }
+
+        function borrar() {
+            const borrar = document.querySelector('.divi')
+            if (!borrar) {
+                alert("No hay nada que borrar!")
+            }
+            document.body.removeChild(borrar);
+        }
+
+        function ternario() {
+            const num = prompt('Ingresa un numero');
+            if(!num){
+                return alert("No escribiste nada!");
+            }
+            if (num == 50) {
+                return alert('Es igual a 50');
+            }
+            return num < 50 ? alert('Es menor a 50') : alert('Es mayor a 50');
+
+        }
+
+    </script>
+</body>
+
+</html>

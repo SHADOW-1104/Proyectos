@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Palindromos</title>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2>Palindromos</h2>
+        <form onkeypress="return event.keyCode != 13" class="form">
+            <label for="text-input" id="label-fieldText">Escribe tu palabra:</label>
+            <input type="text" id="text-input" name="field" autocomplete="off">
+            <button type="button" id="check-btn" class="btn">Comparar!</button>
+            <div id="result" class="result hide"></div>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            color: white;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-image: url(img/1366_2000.webp); */
+            /* background-image: url(img/Beautiful-blue-galaxy-stars-space_1920x1080.jpg); */
+            /* background-image: url(img/Fantasy-space-planet-skyscrapers-mountains_1920x1080.jpg); */
+            /* background-image: url(img/Many-3D-blue-cubes_1920x1080.jpg); */
+            background-image: url(img/Planet-space-sci-fi-light-mountains_1920x1080.jpg);
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 70px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: inset 0 0 20px -15px white;
+            backdrop-filter: blur(10px);
+        }
+
+        .list-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+        }
+
+        .list-container li {
+            padding: 5px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-right: 20px;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            list-style-type: none;
+            transition: 0.1s ease-in-out;
+        }
+
+        .list-container li:hover {
+            cursor: pointer;
+            transition: 0.1s ease-in-out;
+            transform: scale(1.2);
+        }
+
+        .list-container li:active {
+            transition: 0.1 ease;
+            transform: scale(0.95);
+        }
+
+        li a:visited {
+            color: inherit;
+
+        }
+
+        .form {
+            height: 300px;
+            width: 200px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 3px black;
+            backdrop-filter: blur(10px);
+        }
+
+        .form h2 {
+            color: white;
+            text-shadow: 0 0 10px black;
+            margin-bottom: 20%;
+        }
+
+        label {
+            color: white;
+            text-shadow: 0 0 10px black;
+            margin: 10px auto;
+        }
+
+        .inputs {
+            margin: 10px 0;
+            padding: 5px;
+            color: white;
+            text-shadow: 0 0 10px black;
+            background-color: transparent;
+            border: transparent;
+            border-radius: 5px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.76);
+            border-bottom: 2px solid rgba(255, 0, 0, 0.76);
+            outline: none;
+        }
+
+        .inputs:focus {
+            background-color: rgba(255, 255, 255, 0.267);
+        }
+
+        .btn {
+            margin: 10px auto;
+            color: white;
+            font-size: 1.1rem;
+            text-shadow: 0 1px 5px black;
+            background-color: transparent;
+            border: 2px solid white;
+            border-radius: 5px;
+            padding: 3px 10px;
+            outline: none;
+
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 10px 3px white;
+            transition: 0.1s ease;
+        }
+
+        .btn:active {
+            transform: scale(0.90);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="list-container">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#contact">Contact us</a></li>
+        </ul>
+    </nav>
+    <div class="section" id="home">
+        <form class="form">
+            <h2>Inicio de sesion</h2>
+            <label for="input-user">Usuario:</label>
+            <input type="text" id="input-user" autocomplete="off" class="inputs">
+            <label for="input-pass">Password:</label>
+            <input type="password" id="input-pass" class="inputs">
+            <button type="button" class="btn">Iniciar</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

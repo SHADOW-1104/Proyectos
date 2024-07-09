@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    background-color: black;
+}
+
+#label-fieldText,
+#text-input,
+#check-btn {
+    margin-bottom: 30px;
+}
+
+.box {
+    position: relative;
+    width: 250px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px 5px rgb(0, 238, 255);
+    background-color: rgba(77, 77, 77, 0.5);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.box h2 {
+    position: absolute;
+    top: 50px ;
+    color: #0ef;
+    z-index: 10;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 150%;
+    background: #0ef;
+    animation: rotate 4s linear infinite;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border-radius: 20px;
+    background-color: rgb(14, 13, 13);
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #0ef;
+    z-index: 20;
+}
+
+#text-input{
+    color: white;
+    background-color: transparent;
+    padding: 5px 10px;
+    border: 2px solid #0ef;
+    border-radius: 5px;
+}
+
+#text-input:active{
+    border: 2px solid #0ef;
+    outline: none;
+}
+
+#text-input:focus{
+    border: 2px solid #0ef;
+    box-shadow: 0 0 10px 3px #0ef;
+    outline: none;
+}
+
+.btn {
+    padding: 5px;
+    border-radius: 5px;
+    color: #0ef;
+    border: 2px solid #0ef;
+    background-color: transparent;
+}
+
+.btn:hover {
+    transition: 0.5s ease;
+    box-shadow: 0 0 10px  #0ef;
+
+}
+
+.btn:active{
+    transform: scale(0.94);
+}
+
+.result{
+    border: 1px solid #0ef;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    bottom: 20%;
+    -webkit-box-reflect: below
+    5px linear-gradient(transparent, rgba(0, 0, 0, 0.315));
+}
+
+.hide{
+    display: none;    
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

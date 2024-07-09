@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeDex</title>
+    <!-- Estilos CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            min-height: 100vh;
+            padding: 50px;
+            color: white;
+            text-shadow: 0 0 10px black;
+            font-weight: bold;
+            background-color: rgb(29, 29, 29);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            max-width: 200px;
+            padding: 15px;
+            border-radius: 1rem;
+            box-shadow: inset 0 0 5px 5px black    ;
+            background-color: red;
+            transition: 0.2s ease;
+            /* EFECTO DE REFLEJO */
+            -webkit-box-reflect: below
+            5px linear-gradient(transparent, rgba(0, 0, 0, 0.315));
+        }
+
+        .card:hover {
+            transition: 0.2s ease;
+            transform:  scale(1.2);
+        }
+
+        .card .img-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;            
+        }
+
+        .img {
+            width: 100%;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: cornsilk;
+        }
+
+        .card .imgDescription{
+            margin: 10px;
+        }
+
+        .card-description {
+            padding: 5px;
+            border: 2px solid black;
+            border-radius: 10px;
+            display: flex;
+        }
+
+        .card-description .card-skills {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin-left: 10px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Card -->
+    <div class="card">
+        <!-- <figure class="img-box">
+            <img class="img" src="img/200px-Charmander.png" alt="Foto de perfil">
+            <figcaption class="imgDescription"><span id="name">Charmander</span></figcaption>
+        </figure> -->
+
+        <div class="card-description">
+            <div class="card-info">
+                <p>Index:</p>
+                <p>Type:</p>
+                <p>Lvl:</p>
+                <p>ATK:</p>
+            </div>
+
+            <div class="card-skills">
+                <span id="index">5</span>
+                <span id="type">Fuego</span>
+                <span id="lvl">5</span>
+                <span id="atk">10</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Script -->
+    <script>
+
+    </script>
+</body>
+
+</html>

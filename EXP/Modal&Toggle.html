@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            color: white;
+            height: 100vh;
+            display: grid;
+            place-content: center;
+            background-color: black;
+        }
+
+        form {
+            height: 300px;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid aqua;
+            box-shadow: 0 0 20px aqua;
+            background-color: rgba(255, 255, 255, 0.093);
+        }
+
+        form h2 {
+            margin: 20px auto;
+        }
+
+        form label {
+            margin: 20px auto;
+        }
+
+        button {
+            margin: 20px auto;
+            padding: 5px;
+            background-color: transparent;
+            border: 1px solid aqua;
+            border-radius: 5px;
+            color: aqua;
+            transition: 0.2s ease;
+        }
+
+        button:hover{
+            transition: 0.2s ease;
+            box-shadow: 0 0 10px aqua;
+            transform: scale(1.1);
+        }
+
+        button:active{
+            transform: scale(0.90);
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .modal {
+            color: white;
+            text-align: center;
+            margin: 0 auto;
+            border: none;
+            border-radius: 10px;
+            border: 1px solid aqua;
+            box-shadow: 0 0 20px aqua;
+            background-color: rgba(255, 255, 255, 0.093);
+        }
+
+        .modal form{
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form" class="hide">
+        <h2>Formulario Modal</h2>
+        <label for="name">Nombre: </label>
+        <input type="text" autocomplete="off">
+        <label for="lastName">Apellido: </label>
+        <input type="text" autocomplete="off">
+        <button id="btn2" type="button">Enviar ?</button>
+    </form>
+
+    <dialog id="confirm-close-dialog" class="modal">
+        <form method="dialog">
+            <p>Formulario correctamente enviado!</p>
+            <div>
+                <button id="close">
+                    Cerrar
+                </button>
+            </div>
+        </form>
+
+    </dialog>
+
+    <button id="btn" type="button">Toggle Form</button>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const btn2 = document.getElementById('btn2');
+        const form = document.getElementById('form');
+        const close = document.getElementById('close');
+        const confirmCloseDialog = document.getElementById('confirm-close-dialog');
+
+        btn.addEventListener('click', () => {
+            form.classList.toggle('hide');
+        });
+
+        btn2.addEventListener('click', () => {
+            confirmCloseDialog.showModal();
+        });
+
+        close.addEventListener('click', ()=>{
+            confirmCloseDialog.close();
+        });
+
+    </script>
+</body>
+
+</html>

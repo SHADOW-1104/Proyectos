@@ -1,0 +1,12 @@
+.nav-link {
+    text-decoration: none;
+    padding: 5px;
+    color: black;
+}
+
+.nav-link:hover {
+    color: blue;
+    font-size: 1.1rem;
+    background-color: rgba(170, 215, 233, 0.5);
+    border-radius: 0 10px 10px 0;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/galeriaPerritos.css">
+    <title>Fotos de perros</title>
+</head>
+<body>
+    <h1>PerritosGaleria</h1>
+    <main>
+      <section>
+        <h2>Fotos</h2>
+        <!-- TODO: Add link to cat photos -->
+        <p>Click para ver mas <a target="_blank" href="#">perritos</a>.</p>
+        <a href="#"><img src="https://www.lavozdemichoacan.com.mx/wp-content/uploads/2018/12/DvoC7FGUcAEniaH-768x512.jpg" alt="Cachorrito"></a>
+      </section>
+      <section>
+        <h2>Lista de Perritos</h2>
+        <h3>Cosas que los perros aman:</h3>
+        <ul>
+          <li>Premios</li>
+          <li>Cariñitos</li>
+          <li>Pollito</li>
+        </ul>
+        <figure>
+          <img src="https://caminandog.com.mx/b/wp-content/uploads/2020/08/hipo-perritos-Blog04.jpg" alt="Perrito">
+          <figcaption> Los perros <em>aman</em> El pollito.</figcaption>  
+        </figure>
+        <h3>Los perros odian:</h3>
+        <ol>
+          <li>Las pulgas</li>
+          <li>Bañarse</li>
+          <li>Gatos</li>
+        </ol>
+        <figure>
+          <img src="https://caminandog.com.mx/b/wp-content/uploads/2020/08/hipo-perritos-Blog06.jpg" alt="Perrito">
+          <figcaption>Los perros <strong>odian</strong> a los gatos.</figcaption>  
+        </figure>
+      </section>
+      <section>
+        <h2>Formulario de perros</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <fieldset>
+            <legend>Tu perro vive afuera o adentro?</legend>
+            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Adentro</label>
+            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Afuera</label>
+          </fieldset>
+          <fieldset>
+            <legend>Cual es la personalidad de tu perro?</legend>
+            <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Amoroso</label>
+            <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Jugueton</label>
+            <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energico</label>
+          </fieldset>
+          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>
+        No Copyright - <a href="#">freeCodeCamp.org</a>
+      </p>
+    </footer>
+</body>
+</html>
