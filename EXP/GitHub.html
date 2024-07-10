@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos más usados en Git y GitHub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            padding: 15px;
+            border: 1px solid aqua;
+            border-radius: 5px;
+        }
+        .command {
+            font-weight: bold;
+            color: aqua;
+            display: flex;
+            flex-direction: column;
+        }
+        .example {
+            color: white;
+            background-color: rgba(128, 128, 128, 0.219);
+            font-family: "Courier New", Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Comandos más usados en Git y GitHub</h1>
+    <ul>
+        <li>
+            <span class="command">git init</span>: Inicializa un nuevo repositorio Git.<br>
+            <span class="example">Ejemplo: git init</span>
+        </li>
+        <li>
+            <span class="command">git clone [url]</span>: Clona un repositorio existente desde una URL.<br>
+            <span class="example">Ejemplo: git clone https://github.com/usuario/repositorio.git</span>
+        </li>
+        <li>
+            <span class="command">git status</span>: Muestra el estado de los cambios en el repositorio.<br>
+            <span class="example">Ejemplo: git status</span>
+        </li>
+        <li>
+            <span class="command">git add [archivo]</span>: Añade un archivo al área de preparación (staging).<br>
+            <span class="example">Ejemplo: git add archivo.txt</span>
+        </li>
+        <li>
+            <span class="command">git commit -m "[mensaje]"</span>: Realiza un commit de los cambios en el área de preparación con un mensaje descriptivo.<br>
+            <span class="example">Ejemplo: git commit -m "Agregar archivo de configuración"</span>
+        </li>
+        <li>
+            <span class="command">git push</span>: Envía los commits locales al repositorio remoto.<br>
+            <span class="example">Ejemplo: git push origin main</span>
+        </li>
+        <li>
+            <span class="command">git pull</span>: Descarga y fusiona los cambios del repositorio remoto al local.<br>
+            <span class="example">Ejemplo: git pull origin main</span>
+        </li>
+        <li>
+            <span class="command">git branch</span>: Muestra una lista de las ramas locales.<br>
+            <span class="example">Ejemplo: git branch</span>
+        </li>
+        <li>
+            <span class="command">git checkout [rama]</span>: Cambia a una rama específica.<br>
+            <span class="example">Ejemplo: git checkout develop</span>
+        </li>
+        <li>
+            <span class="command">git merge [rama]</span>: Fusiona una rama con la rama actual.<br>
+            <span class="example">Ejemplo: git merge feature-branch</span>
+        </li>
+        <li>
+            <span class="command">git log</span>: Muestra el historial de commits.<br>
+            <span class="example">Ejemplo: git log</span>
+        </li>
+        <li>
+            <span class="command">git remote -v</span>: Muestra las URLs de los repositorios remotos.<br>
+            <span class="example">Ejemplo: git remote -v</span>
+        </li>
+        <li>
+            <span class="command">git fetch</span>: Descarga objetos y referencias desde otro repositorio.<br>
+            <span class="example">Ejemplo: git fetch origin</span>
+        </li>
+        <li>
+            <span class="command">git diff</span>: Muestra las diferencias entre los archivos modificados pero no aún confirmados.<br>
+            <span class="example">Ejemplo: git diff</span>
+        </li>
+        <li>
+            <span class="command">git reset [archivo]</span>: Saca un archivo del área de preparación (staging).<br>
+            <span class="example">Ejemplo: git reset archivo.txt</span>
+        </li>
+        <li>
+            <span class="command">git rm [archivo]</span>: Elimina un archivo del repositorio y del sistema de archivos.<br>
+            <span class="example">Ejemplo: git rm archivo.txt</span>
+        </li>
+        <li>
+            <span class="command">git stash</span>: Almacena temporalmente los cambios no confirmados.<br>
+            <span class="example">Ejemplo: git stash</span>
+        </li>
+        <li>
+            <span class="command">git stash pop</span>: Aplica los cambios almacenados en el stash y los elimina de la lista de stash.<br>
+            <span class="example">Ejemplo: git stash pop</span>
+        </li>
+        <li>
+            <span class="command">git rebase [rama]</span>: Reaplica commits en otra base.<br>
+            <span class="example">Ejemplo: git rebase main</span>
+        </li>
+        <li>
+            <span class="command">git tag [etiqueta]</span>: Crea una nueva etiqueta.<br>
+            <span class="example">Ejemplo: git tag v1.0.0</span>
+        </li>
+        <li>
+            <span class="command">git show [objeto]</span>: Muestra diversos tipos de objetos (commits, etiquetas, etc.).<br>
+            <span class="example">Ejemplo: git show v1.0.0</span>
+        </li>
+    </ul>
+</body>
+</html>
