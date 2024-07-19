@@ -166,18 +166,24 @@ span {
     display: inline-block;
     padding: 0 2.8rem;
     background: var(--main-color);
+    border: 2px solid aqua;
     border-radius: 4rem;
     box-shadow: 0 0 1rem var(--main-color);
     font-size: 1.6rem;
     color: var(--second--bg-color);
     letter-spacing: .1rem;
     font-weight: 600;
-    transition: .5s;
+    transition: .2s;
 }
 
 .btn:hover {
     cursor: pointer;
     box-shadow: none;
+}
+
+.btn:active{
+    background-color: transparent;
+    color: aqua;
 }
 
 /* Diseño del About */
@@ -206,6 +212,7 @@ span {
 /* Diseño de Proyectos */
 
 .proyectos {
+    overflow: hidden;
     background: var(--bg-color);
 }
 
